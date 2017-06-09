@@ -30,12 +30,13 @@ app.config['DEBUG'] = True
     <body>
 
         caesar_form = """
-            <form action="/crossoff" method="POST">
+            <form method="POST">
                 <label>
-                    Caesar Cipher
+                    Rotate By:
                 </label>
-                <input type="text"/>
-                <input type="textarea"/>
+                <input type="text" name="rot"/>
+                <input type="textarea" name="text"/>
+                <input type="submit" value="Submit Query"/>
             </form>
 """      
         
