@@ -6,13 +6,12 @@ app.config['DEBUG'] = True
 
 
 
-"""
-<!DOCTYPE html>
+""" <!DOCTYPE html>
 
 <html>
     <head>
         <style>
-            form {
+           """ form {
                 background-color: #eee;
                 padding: 20px;
                 margin: 0 auto;
@@ -25,6 +24,7 @@ app.config['DEBUG'] = True
                 width: 540px;
                 height: 120px;               
             }
+            """
         </style>
     </head>
     <body>
