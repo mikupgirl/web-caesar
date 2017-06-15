@@ -31,7 +31,7 @@ form = """ <!DOCTYPE html>
                     <label>
                        Rotate By:
                     </label>
-                    <input type="text" name="rot" option value="0" />
+                    <input type="text" name="rot" value="0" />
                     <textarea type="text" name="text">{0}</textarea>
                     <input type="submit" value="Submit Query" />
                 </form>      
@@ -44,9 +44,10 @@ def encrypt():
     rotated_text = ''
     user_num = request.form['rot']
     user_text = request.form['text']
-    rotated_text = user_text + rotate_string
-    final_rotated_text = str(rotated_text)
-    content = "<h1>" + final_rotated_text + "</h1>"
+    user_num = int(user_num)
+    rotated_text = rotate_string(user_text, user_num)
+    final_rotated_text = rotated_text
+    content = "<h1>" + str(final_rotated_text) + "</h1>"
 
     return content
 
