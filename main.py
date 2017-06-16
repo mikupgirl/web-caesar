@@ -47,12 +47,12 @@ def encrypt():
     user_num = int(user_num)
     rotated_text = rotate_string(user_text, user_num)
     final_rotated_text = rotated_text
-    content = "<h1>" + str(final_rotated_text) + "</h1>"
+    content = str(final_rotated_text)
 
-    return content
+    return form.format(content)
 
 @app.route("/")
 def index():
-    return form
+    return form.format('')
 
 app.run()
